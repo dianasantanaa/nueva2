@@ -1,0 +1,147 @@
+body {/*estilo del cuerpo de la pagina web*/
+    background-image: url(img/fondo.avif);/*imagen de fondo*/
+    background-size: cover;/*la imagen es renderizada*/
+    background-repeat: no-repeat;/*controlar que las imagen de fondo no se repita*/
+  font-family: "Bitter", serif;/*tipo de letra de google fonts*/
+  font-optical-sizing: auto;/*modifica el tamaño de la fuente*/
+  font-style: normal;/*fondo normal*/
+}
+      
+
+h1 {/*estilo del primer titulo*/
+    color: #ffffff;/*color de letra*/
+    text-align: center;/*texto alineado al centro*/
+}
+h2{/*estilo del subtitulo*/
+    color: rgb(3, 3, 70);/*color de letra*/
+    text-align: center;/*texto alineado al centro*/
+}
+
+p{/*estilo del parrafo*/
+    color: #ffffff;/*color de letra*/
+    text-align: center;/*texto alineado al centro*/
+}
+
+.console {/*contenedor de los elementos del vinilo*/
+    width: 500px;/*ancho de la consola*/
+    height: 500px;/*altura de la consola del contenido*/
+    border: 5px solid #000;/*borde de la consola, tamaño y color*/
+    border-radius: 20%;/*borde un poco redondeado*/
+    position: relative;/*elemento posicionado a si mismo*/
+    overflow: hidden;/*oculta contenido que sale del contenedor*/
+    display: block;/*coloca un elemento debajo de otro*/
+    margin-left: auto;/*margen izquierdo*/
+    margin-right: auto;/*margen derecho de un elemento*/
+    margin-top: 70px;/*margen superior*/
+    align-items: center;/*texto alineado al centro*/
+    background-image: url("img/album.jpg");/*imagen de fondo del contenedor*/
+    background-size: cover;/**la imagen es renderizada*/
+    background-repeat: no-repeat;/*controlar que las imagen de fondo no se repita*/
+    z-index: -1;/*indica el orden de un elemento*/
+}
+
+
+.vinilo {/*estilo de los circulos del disco*/
+    width: 400px;/*ancho del vinilo*/
+    height: 400px;/*altura del vinilo*/
+    background-color: #333;/*color de fondo del vinilo*/
+    border-radius: 50%;/*borde para hacer circulo*/
+    position: absolute;/*posicion absoluta para que los elementos no se muevan*/
+    display: block;/*coloca un elemento debajo de otro*/
+    margin-left: 55px;/*margen izquierdo*/
+    margin-top: 55px;/*margen superior*/
+}
+
+.album {/*estilo de la imagen de album*/
+    width: 250px;/*ancho de la imagen*/
+    height: 250px;/*altura de la imagen*/
+    background-color: #fff;/*color de fondo de la imagen*/
+    border-radius: 50%;/*estilo de borde para hacer circulo*/
+    position: relative;/*elemento posicionado a si mismo*/
+    margin-left: auto;/*margen izquierdo*/
+    margin-right: auto;/*margen derecho de un elemento*/
+    margin-top: 138px;/*margen superior*/
+    background-image: url("img/disco.jpg");/*imagen referente al album*/
+    background-size: cover;/*la imagen es renderizada*/
+    background-repeat: no-repeat;/*controlar que las imagen de fondo no se repita*/
+}
+
+.agujero {/*agujero de enmedio del disco*/
+    width: 20px;/*ancho del circulo*/
+    height: 20px;/*altura del circulo*/
+    background-color: #000;/*color de fondo del circulo*/
+    border-radius: 50%;/*estilo de borde para hacer circulo*/
+    position: absolute;/*posicion absoluta para que los elementos no se muevan*/
+    top: 50%;/*margen superior*/
+    left: 50%;/*margen izquierdo*/
+    transform: translate(-50%, -50%);/*transforma un elementpo para que este pueda rotar*/
+}
+
+.circulo{/*circulo de la aguja del vinilo*/
+    width:50px;/*ancho del circulo*/
+    height: 50px;/*altura del circulo*/
+    background-color: gray;/*color de fondo del circulo*/
+    border-radius: 50%;/*estilo de borde para hacer circulo*/
+    border: 15px solid rgb(192, 189, 189);/*tamano y color del boder*/
+    position:absolute;/*posicion absoluta para que los elementos no se muevan*/
+    top: 7%;/*margen superior*/
+    left: 77%;/*margen izquierdo*/ 
+}
+.aguja{/*primera parte de la aguja*/
+    width: 17px;/*ancho de la forma*/
+    height: 72px;/*altura de la forma*/
+    background-color: rgb(143, 47, 47);/*color de fondo*/
+    position: absolute;/*posicion absoluta para que los elementos no se muevan*/
+    top: 13%;/*margen superior*/
+    left: 78%;/*margen izquierdo*/ 
+    border-radius: 30%;/*borde redondeado*/
+    transform: rotate(45deg);/*posicion de la aguja*/
+}
+.aguja2{/*segunda parte de la aguja*/
+    width: 10px;/*ancho de la forma*/
+    height: 90px;/*altura de la forma*/
+    background-color: rgb(143, 47, 47);/*color de fondo*/
+    position: absolute;/*posicion absoluta para que los elementos no se muevan*/
+    border-radius: 30%;/*borde redondeado*/
+    top: 22%;/*margen superior*/
+    left: 68%;/*margen izquierdo*/ 
+    transform: rotate(45deg);/*posicion de la aguja*/
+}
+.aguja3{/*tercera parte de la aguja*/
+    width: 10px;/*ancho de la forma*/
+    height: 90px;/*altura de la forma*/
+    background-color: rgb(143, 47, 47);/*color de fondo del circulo*/
+    position: absolute;/*posicion absoluta para que los elementos no se muevan*/
+    border-radius: 30%;/*borde redondeado*/
+    top: 34.5%;/*margen superior*/
+    left: 60.5%;/*margen izquierdo*/ 
+    transform: rotate(17deg);/*posicion de la aguja*/
+
+}
+
+.linea1 {/*estilos de los circulos*/
+    background-color: #fff;/*color de fondo de las lineas*/
+    border-radius: 50%;/*borde para formar un circulo*/
+    position: relative;/*elemento posicionado a si mismo*/
+    top: 50%;/*margen superior*/
+    left: 50%;/*margen izquierdo*/
+    transform: translate(-50%, -50%);/*transforma un elementpo para que este pueda rotar*/
+}
+/*ayuda a que nuestros elementos deseados puedan girar dentro del contenedor*/
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.album { /*a album le damos la instruccion de girar*/
+    animation: girar 10s linear infinite;
+}
+
+.vinilo {/*a las lineas de vinilo tamb ien se da la instruccion de girar*/
+    animation: girar 10s linear infinite;
+}
+
